@@ -1,0 +1,558 @@
+body
+{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecalho /* Armazena as divs : divvoltar, divlogo e invisivel */
+{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 50px;
+    background-color:rgb(95, 228, 115);
+    border-bottom: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+}
+
+.botaovoltar /* Botão de voltar para a tela principal (index.html) localizado no cabeçalho */
+{
+    scale: 70%;
+    margin-left: 20px;
+}
+
+.logo /* Logo localizada no cabeçalho aonde pode ser clicada para voltar para a tela principal (index.html) */
+{
+    scale: 140%;
+}
+
+.invisivel /* Div invisivel criada somente para alinhar e ajustar a responsividade do cabeçalho */
+{
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.divvoltar /* Responsavel por alinhar o botão voltar do cabeçalho */
+{
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.divlogo /* Responsavel por alinhar a imagem da logo da RE:Figure do cabeçalho */
+{
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divlogo a
+{
+    width: 75px;
+    height: 75px;
+    display: flex;
+}
+
+.divvoltar a
+{
+    width: 50px;
+    height: 50px;
+    display: flex;
+}
+
+.corpo
+{
+    width: 1300px;
+    display: flex;
+    height: 600px;
+}
+
+.esquerda
+{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    margin-top: -15%;
+}
+
+.direita
+{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.tebela1
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 8%;
+}
+
+.produto
+{
+    display: flex;
+    background-color: rgb(43, 177, 87);
+    width: 30%;
+    height: 60px;
+    align-items: center;
+    border-style: solid;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.preco
+{
+    display: flex;
+    background-color: rgb(43, 177, 87);
+    width: 20%;
+    height: 60px;
+    align-items: center;
+    border-style: solid;
+    border-left: 0;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.quantidade
+{
+    display: flex;
+    background-color: rgb(43, 177, 87);
+    width: 20%;
+    height: 60px;
+    align-items: center;
+    border-style: solid;
+    border-left: 0;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.total
+{
+    display: flex;
+    background-color: rgb(43, 177, 87);
+    width: 30%;
+    height: 60px;
+    align-items: center;
+    border-style: solid;
+    border-left: 0;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.giovani{
+    flex-direction: row;
+    display: flex;
+}
+.produto1
+{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preco1
+{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantidade1
+{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total1
+{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.meucarrinho
+{
+    display: flex;
+    width: 100%;
+    align-items: end;
+}
+
+.juntartabela
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+}
+
+.entrega
+{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.alinharentrega
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.invi
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    height: 85px;
+}
+
+.alinharr
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+}
+
+.aplicar    
+{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.divinvisivell
+{
+    display: flex;
+    width: 100%;
+    height: 60px;
+}
+
+.entrega form
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.aplicar form
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.styleinput input
+{
+    background-color: hsl(0, 0%, 50%,50%);
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.styleinput1 input
+{
+    background-color: hsl(0, 0%, 50%,50%);
+    width: 100%;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabela3
+{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.resumo
+{
+    display: flex;
+    width: 100%;
+    height: 25%;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    text-align: center;
+    font-size: 25px;
+    background-color: rgb(43, 177, 87);
+}
+
+.invisible
+{
+    width: 100%;
+}
+
+.subtotal
+{
+    width: 100%;
+    height: 15%;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    text-align: center;
+    background-color: rgb(43, 177, 87);
+    border-top: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.entrega1
+{
+    width: 100%;
+    height: 15%;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    text-align: center;
+    background-color: rgb(43, 177, 87);
+    border-top: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.total2
+{
+    width: 100%;
+    height: 30%;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    text-align: center;
+    background-color: rgb(43, 177, 87);
+    border-top: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.finalizar
+{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.adicionarmais
+{
+    width: 95%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fecharpedido
+{
+    width: 95%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adicionarmais input
+{
+    background-color: hsl(0, 0%, 50%,50%);
+    width: 95%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fecharpedido input
+{
+    background-color: hsla(120, 89%, 52%, 0.5);
+    width: 95%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub
+{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 45%;
+    font-size: 20px;
+}
+
+.valor1
+{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    width: 45%;
+    font-size: 20px;
+}
+
+.subtotal
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.entr
+{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 45%;
+    font-size: 20px;
+}
+
+.valor2
+{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    width: 45%;
+    font-size: 20px;
+}
+
+.tot
+{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 45%;
+    font-size: 20px;
+}
+
+.valor3
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 45%;
+    font-size: 20px;
+}
+
+.valor4
+{
+    width: 100%;
+    height: 40%;
+    font-size: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.valor5
+{
+    width: 100%;
+    font-size: 20px;
+    height: 40%;
+    font-size: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+table
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+tbody
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.giovani
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.giovani td
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tabela
+{
+    width: 100%;
+    height: auto;
+    display: block;
+}

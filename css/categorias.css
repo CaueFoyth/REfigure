@@ -1,0 +1,329 @@
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    overflow-x:hidden;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8%;
+    background-color:rgb(95, 228, 115);
+    border-bottom: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+}
+.cabecalho a{
+  margin-right: 30%;
+  display: flex;
+  width: 50px;
+  height: 70px;
+}
+.logo{
+    scale: 100%;
+    transition: all 0.3s ease-out;
+}
+.logo:hover{
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+}
+.pesquisa1{
+    margin-left: -20%;
+    width: 30%;
+    height: 30%;
+    background-color: white;
+    border-width: 2px;
+    border-radius: 4px;
+    border-color: black;
+    border-style: solid;
+}
+.canto{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 13%;
+    height: 100%;
+}
+
+.container-input {
+    position: relative;
+    margin-left: -20%;
+  }
+  
+  .input {
+    width: 150px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 9999px;
+    border: solid 1px #333;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+  }
+  
+  .container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+  }
+  
+  .input:focus {
+    opacity: 1;
+    width: 250px;
+  }
+  .btn {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 1px 5px .2px #00000035;
+    box-shadow: 1px 1px 5px .2px #00000035;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    transition-delay: .2s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-between;
+  }
+  
+  .btn:hover {
+    width: 150px;
+    transition-delay: .2s;
+  }
+  
+  .btn:hover > .paragraph {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s;
+  }
+  
+  .btn:hover > .icon-wrapper .icon {
+    transform: scale(1.1);
+  }
+  
+  .bnt:hover > .icon-wrapper .icon path {
+    stroke: black;
+  }
+  
+  .paragraph {
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 15px;
+    margin-right: 20px;
+    padding-left: 20px;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .icon-wrapper {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon {
+    transform: scale(.9);
+    transition: .2s linear;
+  }
+  
+  .icon path {
+    stroke: #000;
+    stroke-width: 2px;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+  }
+  .opcoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 6%;
+    background-color:rgb(175, 247, 185);
+    border-bottom: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+  }
+  .opcoes_texto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: block;
+    position: relative;
+    float: left;
+  }
+  
+  nav li a {
+    display: block;
+    padding: 10px;
+    color: #0d5000;
+    font-family:Arial, Helvetica, sans-serif;font-size: 18px;
+    text-decoration: none;
+  }
+  
+  nav li:hover {
+    background-color: #85e46e;
+  }
+  
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #85e46e;
+    padding: 0;
+  }
+  
+  nav ul ul li {
+    float: none;
+    width: 100%;
+  }
+  
+  nav ul ul a {
+    padding: 5px 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #0d5000;
+    font-size: 15px;
+  }
+  
+  nav ul li:hover > ul {
+    display: inherit;
+    z-index: 1;
+  }
+  
+  nav ul ul ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+  }
+  .titulo{
+    color: #fff;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: larger;
+    -webkit-text-stroke: 2px #0d5000;
+    margin-top: 2%;
+  }
+  .corpo{
+    width: 100%;
+    height: 430px;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2%;
+  }
+  .catalogo1{
+    width: 70%;
+    height: 70%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+  }
+  .card {
+    box-sizing: border-box;
+    width: 190px;
+    height: 254px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+    flex-direction: column;
+  }
+  
+  .card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+  }
+  
+  .card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+  .imgs{
+    margin-top: -70%;
+    scale: 50%;
+  }
+  .card p{
+    margin-top: -70%;
+  }
+  .rodape{
+    width: 100%;
+    height: 250px;
+    background-color: rgb(95, 228, 115);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .logo_rodape{
+    scale: 20%;
+    margin-left: -15%;
+  }
+  .rodape ul{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 20px;
+    margin-left: -10%;
+  }
+  .contatos{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }

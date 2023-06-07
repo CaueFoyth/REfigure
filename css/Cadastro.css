@@ -1,0 +1,347 @@
+body
+{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* parte do plano de fundo do cadastro */
+.corpo
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+}
+/* imagem de fundo da tela de cadastro */
+.fundo
+{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+}
+/* segundo fundo da imagem para funcionar a responsividade do site no celular */
+.fundo2
+{
+    width: 0%;
+    height: 0vh;
+    position: absolute;
+    display: flex;
+}
+/* cabeçalho do site, parte de cima com a logo do nosso site  */
+.cabecalho
+{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 50px;
+    background-color:rgb(95, 228, 115);
+    border-bottom: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+}
+
+/* botão usado para voltar para a página principal do nosso site */
+.botaovoltar
+{
+    scale: 30%;
+}
+/* logo do nosso site */
+.logo
+{
+    scale: 20%;
+    margin-left: 20px;
+}
+
+/* serve para alinhar a responsividade */
+.invisivel
+{
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* parte geral da tela de cadastro */
+.cadastro
+{
+    display: flex;
+    width: 800px;
+    height: 500px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 40px;
+    box-shadow: 0px 1px 14px 1px rgba(0,0,0,0.74);
+    margin-bottom: 200px;
+    z-index: 10;
+}
+
+/* Título da tela da parte geral da tela de cadastro */
+.cadastrotitulo
+{
+    width: 100%;
+    height: 40px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Informações de Nome, Cpf, etc da tela de cadastro */
+.informacao
+{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+/* Região onde ta localizado os input que o Usuario tem que preencher */
+.informacao form
+{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+/* Div das informações que estão a esquerda do cadastro como : Nome Completo, CPF e EMAIL */
+.informacaoesquerda
+{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+/* Div das informações que estão a direita do cadastro como : Celular, Senha e Confirmar Senha */
+.informacaodireita
+{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+/* Toda parte de responsividade da tela de cadastro, onde fica as informações   */
+@media screen and (max-width: 900px) 
+{
+     .informacao
+     {
+        flex-direction: column;
+     }
+     .cadastro
+     {
+            width: 300px;
+            height: 600px;
+            margin-top: 0;
+     }
+     .informacaodireita
+     {
+        width: 100%;
+        height: 50%;
+     }
+     .informacaoesquerda
+     {
+        width: 100%;
+        height: 50%;
+     }
+     .informacaodireita span
+     {
+        scale: 85%;
+     }
+     .informacaoesquerda span
+     {
+        scale: 85%;
+     }
+     .fundo
+     {
+        width: 0%;
+        height: 0vh;
+     }
+     .fundo2
+     {
+        width: 100%;
+        height: 100vh;
+     }
+     .informacao form
+    {
+    flex-direction: column;
+    }
+}
+
+/* Responsividade total da tela de cadastro toda */
+@media screen and (min-width: 2800px) 
+{
+
+    .cadastro
+    {
+        scale: 200%;
+        margin-top: -100px;
+    }
+    .cabecalho
+    {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            margin-bottom: 50px;
+            background-color:rgb(95, 228, 115);
+            border-bottom: 2px;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-style: solid;
+    }
+    .logo
+    {
+        scale: 42%;
+    }
+    .botaovoltar
+    {
+        scale: 60%;
+        margin-left: 50px;
+    }
+}
+ 
+/* div onde esta localizada o botão para voltar a pagína principal do nosso site */
+.divvoltar
+{
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* Div onde esta localizado a logo do site */
+.divlogo
+{
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* formatação do texto */
+.formatar
+{
+    border-radius: 10px;
+    padding-left: 20px;
+    width: 300px;
+    height: 35px;
+}
+
+/* alinhamento das informações que foram colocadas a esquerda da parte do cadastro */
+.informacaoesquerda span
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Alinhamento das informações que foram colocadas a direita da parte do cadastro */
+.informacaodireita span
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Botão para confirmar o cadastro */
+.criar
+{
+    width: 170px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    background: linear-gradient(334deg, #9af5bd, #24f8a7, #00ff0d);
+    background-size: 180% 180%;
+    animation: gradient-animation 6s ease infinite;
+    transition: 0.3s all ease-in-out;
+    margin-bottom: 20px;
+}
+
+/* Botão caso a pessoa já tenha um cadastro, vá para a tela de login */
+.conta
+{
+  font-size: 15px;
+  position: relative;
+  color: rgb(53, 53, 53);
+  text-decoration: none;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  border-style: groove;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-color: #0eb316;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+
+/* Isso aqui é para mudar a cor de vermelho ou verde, no cadastro dizendo se 
+as informações colocadas ali estão certas ou erradas */
+.certo
+{
+    background-color: rgb(190, 231, 129);
+}
+.certo1
+{
+    background-color: rgb(190, 231, 129);
+}
+.certo2
+{
+    background-color: rgb(190, 231, 129);
+}
+.certo3
+{
+    background-color: rgb(190, 231, 129);
+}
+.certo4
+{
+    background-color: rgb(190, 231, 129);
+}
+.errado4
+{
+    background-color: hsl(0, 86%, 66%);
+}
+.certo5
+{
+    background-color: rgb(190, 231, 129);
+}
+.errado5
+{
+    background-color: hsl(0, 86%, 66%);
+}

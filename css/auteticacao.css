@@ -1,0 +1,136 @@
+body
+{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* parte do plano de fundo do cadastro */
+.corpo
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-content: start;
+    justify-items: start;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    flex-direction: column;
+}
+.cabecalho
+{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 50px;
+    background-color:rgb(95, 228, 115);
+    border-bottom: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+}
+
+/* botão usado para voltar para a página principal do nosso site */
+.botaovoltar
+{
+    scale: 30%;
+}
+/* logo do nosso site */
+.logo
+{
+    scale: 20%;
+}
+
+/* serve para alinhar a responsividade */
+.invisivel
+{
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.divvoltar
+{
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* Div onde esta localizado a logo do site */
+.divlogo
+{
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divlogo a{
+    display: flex;
+    align-items: center;
+    height: 77px;
+}
+.titulo{
+    color: #fff;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: larger;
+    -webkit-text-stroke: 2px #0d5000;
+    margin-top: 5%;
+  }
+  .corpo button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(62, 148, 75);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 19px;
+    padding: 16px;
+    width: 300px;
+    height: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-top: 30%;
+   }
+   
+   button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    align-items: center;
+   }
+   
+   button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+   }
+   
+   button:hover span {
+    padding-right: 15px;
+   }
+   
+   button:hover span:after {
+    opacity: 1;
+    right: 0;
+   }

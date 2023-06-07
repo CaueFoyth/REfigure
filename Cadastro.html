@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re:Figure</title>
+    <link rel="icon" href="imagem/RE FIGURE.png">
+    <link rel="stylesheet" type="text/css" href="css/Cadastro.css">
+</head>
+<body>
+    <!-- div do cabeçalho -->
+    <div class="cabecalho">
+        <div class="divvoltar"><a href="index.php"><img src="imagem/botaovoltar.png" class="botaovoltar"></div></a>
+        <div class="divlogo"><a href="index.php"><img src="imagem/RE FIGURE.png" class="logo"></div></a>
+        <div class="invisivel"></div>
+    </div>
+<div class="corpo">
+    <img class="fundo" src="imagem/fundo.png">
+    <img class="fundo2" src="imagem/fundo2.png">
+    <div class="cadastro">
+        <div class="cadastrotitulo"><b>Cadastro</b></div>
+        <div class="informacao">
+            <form action="crud.php" method="post">
+            <div class="informacaoesquerda">
+                    <span> <ion-icon class="imgs" name="people-outline"></ion-icon><b>Nome Completo:</b> 
+                    <input maxlength="100" type="text" id="Nome" name="nome_cliente" onkeyup="ValidarNome();" class="formatar" placeholder ="Nome Completo"></span>   
+                    <span> <ion-icon class="imgs" name="newspaper-outline"></ion-icon><b>CPF:</b> 
+                    <input maxlength="14" type="text" id="cpf" name="cpf_cliente" onkeyup="ValidarCPF();" class="formatar" placeholder ="xxx.xxx.xxx-xx"></span>
+                    <span> <ion-icon class="imgs" name="mail-outline"></ion-icon><b>Email:</b> 
+                    <input maxlength="80" type="email" id="Email" name="email_cliente" onkeyup="ValidarEmail();" class="formatar" placeholder ="Email"></span>
+            </div>
+            <div class="informacaodireita">
+                <span> <ion-icon class="imgs" name="call-outline"></ion-icon><b>Celular:</b> 
+                <input maxlength="13" type="text" id="Telefone" name="celular_cliente" onkeyup="ValidarTelefone();" class="formatar" required placeholder="(xx) xxxxx-xxxx"></span>
+                <span> <ion-icon class="imgs" name="lock-closed-outline"></ion-icon><b>Senha: (Mínimo de 8 caracteres)</b> 
+                <input minlength="8" required maxlength="30" name="senha_cliente" type="password" onkeyup="ValidarSenha()" id="Senha" class="formatar" placeholder ="Senha"></span> 
+                <span> <ion-icon class="imgs" name="lock-closed-outline"></ion-icon><b>Confirmar Senha:</b> 
+                <input minlength="8" required maxlength="30" type="password" id="Senha1" onkeyup="ValidarSenha()" class="formatar" placeholder ="Confirmar Senha"></span> 
+            </div>
+        </div>
+        <a class="conta" href="login.php">><b>Já possui uma conta?</b></a>
+        <input type="submit" value="Criar conta" name="inserir" class="criar">
+        </form>
+    </div>
+</div>
+<script src="js/Cadastro.js"></script>   
+</body>
+</html>
