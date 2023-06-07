@@ -26,13 +26,21 @@ include("conecta.php");
           </div>
           
         <div class="canto">
-          <form action="login.php">
-            <button class="btn">
-                <p class="paragraph"> Entrar </p>
+        <form action="index.php" method="post">
+            <button name="botao" type="submit" class="btn">
+              <?php 
+              ?>
+                <p class="paragraph"> <?php echo("Entrar"); ?> </p>
                 <span class="icon-wrapper">
                     <ion-icon name="person-circle-outline"></ion-icon>
                 </span>
               </button></form>
+              <?php
+              if(isset($_POST["botao"]) )
+              {
+                ?><script>window.location.replace("login.php");</script><?php
+              }
+              ?>
               <button class="btn">
                 <p class="paragraph"> Carrinho </p>
                 <span class="icon-wrapper">

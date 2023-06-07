@@ -11,7 +11,6 @@ include("conecta.php");
     <title>RE:Figure</title>
     <link rel="stylesheet" type="text/css" href="css/Login.css">
     <link rel="icon" href="imagem/RE FIGURE.png">
-    
 </head>
 <body>
     <div class="cabecalho">
@@ -23,7 +22,7 @@ include("conecta.php");
     </div>
     <div class="loginmeio">
         <img class="fundo" src="imagem/fundo.png">
-        <form action="login.php"> method="post">
+        <form action="login.php" method="post">
             <div class="login">
                 <h2 class="logintitulo"><ion-icon class="icones" name="log-in-outline"></ion-icon>Login</h2>
                 <div class="loginbox">
@@ -67,6 +66,7 @@ if(isset($_POST["entrar"]) )
         alert("Email e/ou senha inválidos!");}
         </script>';
 
+
     }
 
     if($n==1)
@@ -77,7 +77,6 @@ if(isset($_POST["entrar"]) )
         }
         else{
             header("Location:index.php");
-            $comando = $pdo->prepare();
         }
     }
 }
