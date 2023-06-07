@@ -44,7 +44,7 @@ include("conecta.php");
                     <ion-icon name="person-circle-outline"></ion-icon>
                 </span>
               </button></form>
-              <?php
+              <?php 
               if(isset($_POST["botao"]) )
               {
                 ?><script>window.location.replace("login.php");</script><?php
