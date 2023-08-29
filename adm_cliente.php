@@ -24,13 +24,6 @@ include("conecta.php");
                 </a>
               
             </li>
-            <li class="has-subnav">
-                <a href="adm_produto.html">
-                    <i class="icon icon-file-text icon-text"></i>
-                    <span class="menu-texto">Produtos <ion-icon name="pricetags-outline"></ion-icon></span>
-                </a>
-                
-            </li>
             
             <li class="has-subnav">
                 <a href="adm_cliente.php">
@@ -43,7 +36,7 @@ include("conecta.php");
         <ul class="logout">
             
             <li>
-               <a href="index.php">
+               <a href="logado.php">
                     <i class="icon icon-plug icon-text"></i>
                     <span class="menu-texto"> Sair <ion-icon name="log-out-outline"></ion-icon></span>
                 </a>
@@ -85,8 +78,8 @@ include("conecta.php");
                 <td><?php echo($email); ?></td>
                 <td><?php echo($celular); ?></td>
                 <td class="ultimacoluna"> 
-                    <a href=""><button class="btn">Editar</button></a> 
-                    <a href=""><button class="btn">Excluir</button></a> 
+                    <a href="editarcliente.php"><button class="btn">Editar</button></a> 
+                    <a href="excluir.php"><button class="btn">Excluir</button></a> 
                 </td>
                 </tr>
             <?php } ?> 

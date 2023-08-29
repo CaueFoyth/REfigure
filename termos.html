@@ -4,89 +4,168 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
     <title>Re:Figure</title>
     <link rel="icon" href="imagem/RE FIGURE.png">
-    <link rel="stylesheet" type="text/css" href="css/filamento.css">
+    <link rel="stylesheet" type="text/css" href="./css/termos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
-    <div class="cabecalho">
-        <a href="index.php">
-        <img class="logo" src="imagem/RE FIGURE.png"></a>
-        <div class="container-input">
-            <input type="text" placeholder="Pesquisar" name="text" class="input">
-            <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-              <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
-          </svg>
-          </div>
-          
-        <div class="canto">
-          <form action="login.php">
-            <button class="btn">
-                <p class="paragraph"> Entrar </p>
-                <span class="icon-wrapper">
-                    <ion-icon name="person-circle-outline"></ion-icon>
-                </span>
-              </button></form>
-              <form action="carrinho.php">
-                <button class="btn">
-                  <p class="paragraph"> Carrinho </p>
-                  <span class="icon-wrapper">
-                      <ion-icon name="cart-outline"></ion-icon>
-                  </span>
-                </button></form>
-        </div>
-    </div>
-    <div class="opcoes">
-        <nav class="opcoes_texto">
-          <ul>
-            <li><a href="lancamentos.html"> <b> Lançamentos</a> </b></li>
-            <li><a href="categorias.html"> <b> Categorias </a></b>
-              <ul>
-                <li><a href="categoria_animal.html"> <b> Animais</a></b></li>
-                <li><a href="categoria_pb.html"> <b> P&B</a></b></li>
-                <li><a href="categoria_colorido.html"> <b> Coloridos</a></b></li>
-              </ul>
+  <i class="bi bi-list menu-mobile"></i>
+
+  <aside id="aside"> <!--Menu lateral-->
+    <section class="profile"> <!--Seção da foto de perfil, nome, e social-links-->
+        <img src="./imagem/RE FIGURE.png" alt="Foto refigure"> <!--Foto pessoal-->
+        <h1>Re:Figure</h1>
+    </section>
+
+    <nav id="navbar" class="nav-menu"> <!--navbar lateral-->
+        <ul class="nav flex-column"> <!--Lista em column-->
+            <li class="nav-item">
+                <a class="nav-link" href="logado.php"><i class="bi bi-house"></i>Inicio</a>
             </li>
-            <li><a href="filamento.html"> <b> Filamento</a></b></li>
-            <li><a href="termos.html"> <b> Termos</a></b></li>
-            <li><a href="suporte.html"> <b> Suporte</a></b></li>
-          </ul>
-        </nav>
+            <li class="nav-item">
+                <a class="nav-link" href="conta.php"><i class="bi bi-person"></i>Conta</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="carrinho.php"><i class="bi bi-list-check"></i>Carrinho</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="categorias.html"><i class="bi bi-collection"></i>Categorias</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="filamento.html"><i class="bi bi-recycle"></i>Filamento</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="termos.html"><i class="bi bi-newspaper"></i>Termos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="suporte.html"><i class="bi bi-question-circle"></i>Suporte</a>
+            </li>
+        </ul>
+    </nav>
+</aside>
+
+<section id="cabecalho" class="cabecalho alinhamento m-0 p-0">
+
+    <div class="cantologo col-md-4 d-flex justify-content-start align-itens-center text-align-center">
+
+        <img class="logo" id="logo" onclick="Logo1()" src="imagem/RE FIGURE.png">
+
     </div>
+    <div class="nome canto col-md-4">
+        <b>Re:Figure <i class="bi bi-tree"></i></b>
+    </div>  
+    <div class="canto col-md-4 justify-content-end align-itens-center text-align-center">
+
+            <button name="botao" class="btn me-2" onclick="Conta()">
+                <p class="paragraph mt-3"> Conta </p>
+                <span class="icon-wrapper">
+                    <i class="bi bi-person"></i>
+                </span>
+            </button>
+            <button class="btn me-3" name="carrinho" onclick="carrinho()">
+                <p class="paragraph mt-3"> Carrinho </p>
+                <span class="icon-wrapper">
+                    <i class="bi bi-cart2"></i>
+                </span>
+            </button>
+    </div>
+
+</section>
+
+<section id="opcoes" class="opcoes m-0 p-0">
+
+    <div class="alinhamento col-md-3">
+        <b onclick="lancamentos()" style="cursor: pointer;">Lançamentos</b>
+    </div>
+
+    <div class="alinhamento col-md-3">
+        <b onclick="categorias()" style="cursor: pointer;">Categorias</b>
+    </div>
+
+    <div class="alinhamento col-md-3">
+        <b onclick="filamento()" style="cursor: pointer;">Filamento</b>
+    </div>
+
+    <div class="alinhamento col-md-3">
+        <b onclick="suporte()" style="cursor: pointer;">Suporte</b>
+    </div>
+
+</section>
+    
     <div class="corpo">
         <div class="titulo">
             <h1>Termos</h1>
             </div>
-
-            <div class="escrita">
-                <p>A sua privacidade é importante para nós. É política do RE:Figure respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site RE:Figure, e outros sites que possuímos e operamos.Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis ​​para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas políticas de privacidade.Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contacto connosco.Compromisso do UsuárioO usuário se compromete a fazer uso adequado dos conteúdos e da informação que o RE:Figure oferece no site e com caráter enunciativo, mas não limitativo:A) Não se envolver em atividades que sejam ilegais ou contrárias à boa fé a à ordem pública;B) Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, bet365 brasil ou azar, qualquer tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do RE:Figure, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.Mais informaçõesEsperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site.Esta política é efetiva a partir de 11 April 2023 14:14</p>
+          </head>
+          <body>      
+            <div class="section">
+              <h2>1. Aceitação dos Termos</h2>
+              <p><span class="term-number">1.1</span> Ao acessar ou utilizar nosso site, você declara ter pelo menos 18 anos de idade ou possuir capacidade legal para celebrar contratos em seu país de residência. Se você estiver acessando ou utilizando o site em nome de uma entidade, declara que tem autoridade para vincular tal entidade a estes Termos de Uso.</p>
             </div>
-            <div class="rodape">
-                <img class="logo_rodape" src="imagem/RE FIGURE.png">
-                <ul>
-                  <a href="filamento.html"><li>Filamento</li></a>
-                  <a href="lancamentos.html"><li>Lançamentos</li></a>
-                  <a href="termos.html"><li>Termos</li></a>
-                </ul>
-                <ul>
-                  <li>Desenvolvedores:</li>
-          <li>Cauê Marchi Foyth</li>
-          <li>Jônatas Rocha dos Santos</li>
-          <li>Lucas Giovani Fruck</li>
-        </ul>
-        <div class="contatos">
-          <ul>
-            <a href="https://instagram.com/caue_foyth" target="_blank"><li><ion-icon name="logo-instagram"></ion-icon>Cauê</li></a>
-            <a href="https://instagram.com/arcaro_jonatas" target="_blank"><li><ion-icon name="logo-instagram"></ion-icon>Jônatas</li></a>
-            <a href="https://instagram.com/lucasgiovanifruck" target="_blank"><li><ion-icon name="logo-instagram"></ion-icon>Lucas</li></a>
-                    
-                    
+          
+            <div class="section">
+              <h2>2. Descrição do Serviço</h2>
+              <p><span class="term-number">2.1</span> Nosso site oferece a venda de bonecos de impressão 3D fabricados com plástico reciclável. As descrições dos produtos, incluindo imagens, são fornecidas para dar uma ideia precisa do item em questão. No entanto, não garantimos que as cores ou detalhes reproduzidos no site sejam completamente precisos.</p>
+            </div>
+          
+            <div class="section">
+              <h2>3. Registro e Conta do Usuário</h2>
+              <p><span class="term-number">3.1</span> Para acessar certas funcionalidades do site, pode ser necessário criar uma conta de usuário. Você é responsável por fornecer informações precisas, atualizadas e completas durante o processo de registro. Você é responsável por manter a confidencialidade de suas informações de login e é totalmente responsável por todas as atividades que ocorrerem em sua conta.</p>
+            </div>
+          
+            <div class="section">
+              <h2>4. Propriedade Intelectual</h2>
+              <p><span class="term-number">4.1</span> O site, seu conteúdo e todos os direitos de propriedade intelectual relacionados são de propriedade exclusiva nossa ou de nossos licenciadores. Você concorda em não copiar, reproduzir, modificar, distribuir ou criar obras derivadas com base em nosso site ou em qualquer parte dele, sem o nosso consentimento prévio por escrito.</p>
+            </div>
+          
+            <div class="section">
+              <h2>5. Uso Adequado</h2>
+              <p><span class="term-number">5.1</span> Você concorda em utilizar nosso site e os produtos adquiridos exclusivamente para fins legais. Você não deve utilizar o site para qualquer atividade que viole as leis aplicáveis ou para qualquer fim fraudulento ou prejudicial. Além disso, você não deve interferir no funcionamento adequado do site ou violar qualquer medida de segurança implementada.</p>
+            </div>
+          
+            <div class="section">
+              <h2>6. Garantias e Limitação de Responsabilidade</h2>
+              <p><span class="term-number">6.1</span> O site é fornecido "como está", sem garantias de qualquer tipo, expressas ou implícitas. Não garantimos a disponibilidade contínua ou livre de erros do site, nem a precisão, confiabilidade ou completude de qualquer informação disponibilizada. Em nenhuma circunstância seremos responsáveis por quaisquer danos diretos, indiretos, incidentais, consequenciais ou punitivos decorrentes do uso ou incapacidade de uso do site.</p>
+            </div>
+          
+            <div class="section">
+              <h2>7. Privacidade e Proteção de Dados</h2>
+              <p><span class="term-number">7.1</span> Respeitamos a sua privacidade e protegemos seus dados pessoais de acordo com nossa Política de Privacidade. Ao utilizar nosso site, você concorda com a coleta, uso e divulgação de suas informações pessoais.</p>
+            </div>
+            <section id="rodape" class="m-0 p-0">
+              <div class="alinharrow row">
+                <div class="alinhamentodalogo col-md-3">
+                  <img class="logorodape" id="logo" onclick="Logo1()" src="imagem/RE FIGURE.png">
+                </div>
+                <div class="alinhamentorodape col-md-3">
+                  <p>Copyright &copy; 2023 - All Rights Reserved - Re:Figure</p>
+                </div>
+                <div class="delete col-md-3">
+                  <ul>
+                    <li>Desenvolvedores:</li>
+                    <li>Cauê Marchi Foyth</li>
+                    <li>Jônatas Rocha dos Santos</li>
+                    <li>Lucas Giovani Fruck</li>
                   </ul>
                 </div>
+                <div class="alinhamentorodape col-md-3">
+                  <div class="divpai">
+                    <ul class="insta">
+                      <a href="https://instagram.com/caue_foyth" target="_blank"><li><i class="bi bi-instagram"></i>Cauê</li></a>
+                      <a href="https://instagram.com/arcaro_jonatas" target="_blank"><li><i class="bi bi-instagram"></i>Jônatas</li></a>
+                      <a href="https://instagram.com/lucasgiovanifruck" target="_blank"><li><i class="bi bi-instagram"></i>Lucas</li></a>     
+                    </ul>
+                  </div>
                 </div>
-    </div>
-        
+              </div>
+    
+            </section>
+    
+ </main>       
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="js/tela_inicial.js" class="fundo"></script>   
 </body>
 </html>
