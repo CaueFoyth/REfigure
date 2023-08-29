@@ -1,0 +1,529 @@
+html, body
+{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#aside /*Menu lateral*/
+{
+    position: fixed;
+    top: 0;
+    left: -300px;
+    bottom: 0;
+    background-color: #063f1c;
+    overflow-y: auto;
+    width: 300px;
+    transition: all ease-in-out 0.5s;
+    padding: 0 15px;
+    z-index: 9997;
+}
+
+#aside .profile img /*foto pessoal*/
+{
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+}
+
+#aside .profile h1 /*Nome abaixo da foto pessoal*/
+{
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+
+.nav-menu /*Para o nav-menu ficar alinhado*/
+{
+    padding: 1.5rem;
+}
+
+.nav-menu a,
+.nav-menu a:focus /*Para deixar os textoscom suas respectivas cores e tamanhos*/
+{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i /*Para deixar os icones com suas respectivas cores e tamanhos*/
+{
+    font-size: 24px;
+    padding-right: 0.8rem;
+    color: #fff;
+}
+
+.nav-menu a:hover
+{
+    color: #fff;
+}
+
+i.menu-mobile
+{
+    position: fixed;
+    color: #fff;
+    background-color: #063f1c;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-nav-active
+{
+    overflow: hidden;
+}
+
+.menu-nav-active #aside
+{
+    left: 0;
+}
+
+section#cabecalho
+{
+    width: 100%;
+    height: 10vh;
+    border-bottom: 2px solid;
+    background-color:rgb(95, 228, 115);
+}
+
+.cantologo
+{
+    width: 33%;
+    height: 100%;
+}
+
+.alinhamento
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.logo
+{
+    scale: 100%;
+    transition: all 0.3s ease-out;
+}
+.logo:hover
+{
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+}
+
+.nome
+{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  height: 100%;
+}
+
+.canto
+{
+    display: flex;
+}
+
+.btn 
+{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 5px .2px #00000035;
+    box-shadow: 1px 1px 5px .2px #00000035;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    transition-delay: .2s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-between;
+  }
+  
+  .btn:hover 
+  {
+    width: 150px;
+    transition-delay: .2s;
+    background-color: #fff;
+  }
+  
+  .btn:hover .paragraph 
+  {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s;
+  }
+  
+  .btn:hover  .icon-wrapper .icon 
+  {
+    transform: scale(1.1);
+  }
+
+  .paragraph 
+  {
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 15px;
+    margin-right: 20px;
+    padding-left: 20px;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .icon-wrapper 
+  {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fundo{
+    width: 100%;
+    height: 300px;
+}
+
+.tablet
+{
+    display: none;
+}
+
+.celular
+{
+    display: none;
+}
+
+.opcoes
+{
+  height: 5vh;
+  background-color:rgb(175, 247, 185);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid;
+}
+
+.titulo{
+    color: #fff;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: larger;
+    -webkit-text-stroke: 2px #0d5000;
+    margin-top: 5%;
+  }
+
+  .card {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    background: #191919;
+    overflow: hidden;
+    box-shadow: 0px 1px 14px 1px rgba(0,0,0,0.74);
+    border-radius: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #85e46e;
+    transform: skewY(345deg);
+    transition: 0.5s;
+  }
+  
+  .card:hover::before {
+    top: -70%;
+    transform: skewY(390deg);
+  }
+  
+  .card::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 6em;
+    color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .card .imgBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+  }
+  .card .contentBox {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+  }
+  
+  .card .contentBox h3 {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .card .contentBox .preco {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  .card .contentBox .comprar {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: #000000;
+    text-decoration: none;
+    background: #85e400;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+  }
+  
+  .card:hover .contentBox .comprar {
+    top: 0;
+    opacity: 1;
+  }
+
+  .figure {
+    height: 300px;
+    width: auto;
+  }
+
+  .rodape
+  {
+    width: 100%;
+    height: 30vh;
+    border-top: 3px solid;
+    background-color:rgb(95, 228, 115);
+    display: flex;
+    flex-direction: row;
+  }
+
+.alinharrow
+{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.alinhamentodalogo
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+}
+
+.logorodape
+{
+  scale: 30%;
+  transition: all 0.3s ease-out;
+}
+
+.logorodape:hover
+{
+  cursor: pointer;
+  transform: scale(1.1,1.1);
+}
+
+.alinhamentorodape
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%
+}
+.delete
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.divpai
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.insta
+{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  display: flex;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+section#rodape
+{
+  background-color:rgb(95, 228, 115);
+  height: 200px;
+}
+
+@media (max-width: 1024px)
+{
+    .tablet
+    {
+        display: flex;
+    }
+    .pc
+    {
+        display: none;
+    }
+
+    #aside
+    {
+        left: -300;
+    }
+    i.menu-mobile
+    {
+        display: flex;
+    }
+    section#inicio h2
+    {
+        font-size: 3rem;
+    }
+    section#inicio span#subtitle
+    {
+        margin-left: 0;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    #main
+    {
+        margin-left: 0;
+    }
+    section#opcoes
+    {
+        display: none;
+    }
+    section .canto
+    {
+        display: none;
+    }
+    section#cabecalho
+    {
+      justify-content: space-between;
+      display: flex;
+    }
+}
+
+@media (max-width: 768px)
+{
+
+    .titulo
+    {
+        margin-top: 35%;
+    }
+    .celular
+    {
+        display: flex;
+    }
+    .tablet
+    {
+        display: none;
+    }
+
+  .alinharrow
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110%;
+    flex-direction: row;
+    background-color:rgb(95, 228, 115);
+  }
+  .alinhamentodalogo
+  {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(95, 228, 115);
+  }
+  .delete
+  {
+    display: none;
+  }
+  .alinhamentorodape
+  {
+    background-color:rgb(95, 228, 115);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .insta
+  {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+
+}

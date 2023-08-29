@@ -9,6 +9,24 @@ body
     overflow-x: hidden;
 }
 
+.input-style {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555;
+  outline: none;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  margin-left: 10px;
+  width: 100px;
+}
+
+.input-style:focus {
+  border-color: rgb(0, 146, 0);
+  box-shadow: 0 0 0 0.2rem rgb(95, 228, 115);
+}
+
 .esquerda
 {
     width: 900px;

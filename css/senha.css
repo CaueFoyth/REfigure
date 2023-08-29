@@ -6,8 +6,91 @@ body
     overflow-x: hidden;
 }
 
-.errado{
-  display: none;
+#aside /*Menu lateral*/
+{
+    position: fixed;
+    top: 0;
+    left: -300px;
+    bottom: 0;
+    background-color: #063f1c;
+    overflow-y: auto;
+    width: 300px;
+    transition: all ease-in-out 0.5s;
+    padding: 0 15px;
+    z-index: 9997;
+}
+
+#aside .profile img /*foto pessoal*/
+{
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+}
+
+#aside .profile h1 /*Nome abaixo da foto pessoal*/
+{
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+
+.nav-menu /*Para o nav-menu ficar alinhado*/
+{
+    padding: 1.5rem;
+}
+
+.nav-menu a,
+.nav-menu a:focus /*Para deixar os textoscom suas respectivas cores e tamanhos*/
+{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i /*Para deixar os icones com suas respectivas cores e tamanhos*/
+{
+    font-size: 24px;
+    padding-right: 0.8rem;
+    color: #fff;
+}
+
+.nav-menu a:hover
+{
+    color: #fff;
+}
+
+i.menu-mobile
+{
+    position: fixed;
+    color: #fff;
+    background-color: #063f1c;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-nav-active
+{
+    overflow: hidden;
+}
+
+.menu-nav-active #aside
+{
+    left: 0;
 }
 
 /* botão usado para voltar para a página principal do nosso site */
@@ -16,22 +99,7 @@ body
     scale: 30%;
 }
 /* logo do nosso site */
-.logo
-{
-    scale: 100%;
-    transition: all 0.3s ease-out;
-    cursor: pointer;
-}
 
-.nome
-{
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  height: 100%;
-}
 
 /* serve para alinhar a responsividade */
 .invisivel
@@ -69,6 +137,27 @@ body
 }
 
 /* Div onde esta localizado a logo do site */
+.logo
+{
+    scale: 100%;
+    transition: all 0.3s ease-out;
+}
+.logo:hover
+{
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+}
+
+.nome
+{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  height: 100%;
+}
+
 .divlogo
 {
     width: 33.3%;
@@ -76,17 +165,6 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.cantologo
-{
-    width: 33%;
-    height: 100%;
-}
-
-.canto
-{
-    display: flex;
 }
 
 section#cabecalho
@@ -167,14 +245,38 @@ section#cabecalho
     justify-content: space-evenly;
     align-items: start;
 }
+.input-style {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+    outline: none;
+    margin-top: 3%;
+    margin-bottom: 2%;
+  }
+  
+  .input-style:focus {
+    border-color: rgb(0, 146, 0);
+    box-shadow: 0 0 0 0.2rem rgb(95, 228, 115);
+  }
+  
+  .opcoes
+  {
+    height: 5vh;
+    background-color:rgb(175, 247, 185);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid;
+  }
 
 .botoesalterar
 {
-    margin-left: 50%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 30%;
+    width: 98%;
     align-items: start;
     margin: 5px;
 }
@@ -182,7 +284,7 @@ section#cabecalho
 .btn1 {
     width: fit-content;
     min-width: 100px;
-    height: 50px;
+    height: 35px;
     padding: 8px;
     border-radius: 5px;
     border: 2.5px solid hwb(165 61% 34%, 50%);
@@ -205,269 +307,7 @@ section#cabecalho
     transform: scale(0.95);
   }
 
-  .btn2 {
-    width: fit-content;
-    min-width: 100px;
-    height: 35px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2.5px solid hwb(165 61% 34%, 50%);
-    box-shadow: 0px 0px 20px -20px;
-    cursor: pointer;
-    background-color: hsl(120, 64%, 47%, 50%);;
-    transition: all 0.2s ease-in-out 0ms;
-    user-select: none;
-    font-family: 'Poppins', sans-serif;
-    margin-left: 2%;
-    margin-top: -0.5%;
-    font-size: small;
-  }
-  
-  .btn2:hover {
-    background-color: #F2F2F2;
-    box-shadow: 0px 0px 20px -18px;
-  }
-  
-  .btn2:active {
-    transform: scale(0.95);
-  }
-
-  .sair {
-    width: fit-content;
-    min-width: 100px;
-    height: 50px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2.5px solid hwb(165 61% 34%, 50%);
-    box-shadow: 0px 0px 20px -20px;
-    cursor: pointer;
-    background-color: hsla(0, 64%, 47%, 0.5);;
-    transition: all 0.2s ease-in-out 0ms;
-    user-select: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: small;
-    margin-left: 5%;
-  }
-  
-  .sair:hover {
-    background-color: #F2F2F2;
-    box-shadow: 0px 0px 20px -18px;
-  }
-  
-  .sair:active {
-    transform: scale(0.95);
-  }
-
-.minhaconta
-{
-    display: flex;
-    width: 100%;
-    height: 7vh;
-    align-items: center;
-    justify-content: center;
-}
-
-.enderecotitulo
-{
-    display: flex;
-    justify-content: start;
-    align-self: center;
-    width: 100%;
-    height: auto;
-    margin-left: 12%;
-    font-size: 25px;    
-}
-
-.enderecos
-{
-    width: 100%;
-    margin-left: 6%;
-    height: auto;
-}
-
-.enderecos h1
-{
-    font-size: 25px;
-}
-
-.enderecos h2
-{
-    font-size: 15px;
-}
-
-.meuspedidostitulo
-{
-    display: flex;
-    justify-content: start;
-    align-self: center;
-    width: 100%;
-    height: auto;
-    margin-left: 12%;
-    font-size: 25px;   
-}
-
-.tabela td
-{
-    border-style: solid;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-width: 1px;
-    border-color: hsla(120, 86%, 28%, 0.5);
-}
-
-.tabela
-{
-    height: 20vh;
-    justify-content: center;
-    margin-bottom: 5%;
-}
-.delete
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.alinharrow
-{
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.insta
-{
-  font-family: Arial, Helvetica, sans-serif;
-  color: #fff;
-  display: flex;
-  font-size: 20px;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-}
-
-.divpai
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.alinhamentorodape
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 18vh;
-}
-
-.alinhamento
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-}
-
-@media (max-width: 768px)
-{
-  .fundo_fila_680
-  {
-    display: flex;
-    width: 100%;
-    height: auto;
-  }
-  .fundo_fila_1024
-  {
-    display: none;
-    width: 100%;
-    height: auto;
-  }
-  .alinharrow
-  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 110%;
-    flex-direction: row;
-    background-color:rgb(95, 228, 115);
-  }
-
-  .alinhamentodalogo
-  {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:rgb(95, 228, 115);
-  }
-  .delete
-  {
-    display: none;
-  }
-  .alinhamentorodape
-  {
-    background-color:rgb(95, 228, 115);
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .insta
-  {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-  }
-
-}
-
-section#rodape
-{
-  background-color:rgb(95, 228, 115);
-  height: 200px;
-}
-
-.opcoes
-{
-  height: 5vh;
-  background-color:rgb(175, 247, 185);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 2px solid;
-}
-.rodape
-{
-  width: 100%;
-  height: 30vh;
-  border-top: 3px solid;
-  background-color:rgb(95, 228, 115);
-  display: flex;
-  flex-direction: row;
-}
-
-.logorodape
-{
-  scale: 30%;
-  transition: all 0.3s ease-out;
-}
-
-.alinhamentodalogo
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  height: 18vh;
-}
-
-.btn 
+  .btn 
 {
     cursor: pointer;
     width: 50px;
@@ -521,6 +361,182 @@ section#rodape
     transition-delay: .4s;
   }
 
+  .icon-wrapper 
+  {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn:hover  .icon-wrapper .icon 
+  {
+    transform: scale(1.1);
+  }
+
+  
+
+
+.minhaconta
+{
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    margin-top: 26vh;
+}
+.delete
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.alinharrow
+{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.insta
+{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  display: flex;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.divpai
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alinhamentorodape
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18vh;
+}
+
+.cantologo
+{
+    width: 33%;
+    height: 100%;
+}
+
+.canto
+{
+    display: flex;
+}
+
+.alinhamento
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+@media (max-width: 768px)
+{
+  .fundo_fila_680
+  {
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+  .fundo_fila_1024
+  {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+  .alinharrow
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110%;
+    flex-direction: row;
+    background-color:rgb(95, 228, 115);
+  }
+  .alinhamentodalogo
+  {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(95, 228, 115);
+  }
+  .delete
+  {
+    display: none;
+  }
+  .alinhamentorodape
+  {
+    background-color:rgb(95, 228, 115);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .insta
+  {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+
+}
+
+section#rodape
+{
+  background-color:rgb(95, 228, 115);
+  height: 200px;
+}
+.rodape
+{
+  width: 100%;
+  height: 30vh;
+  border-top: 3px solid;
+  background-color:rgb(95, 228, 115);
+  display: flex;
+  flex-direction: row;
+}
+
+.logorodape
+{
+  scale: 30%;
+  transition: all 0.3s ease-out;
+}
+
+.alinhamentodalogo
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 18vh;
+}
 
 .logorodape:hover
 {
@@ -542,8 +558,6 @@ section#rodape
     background-color: #fff;
 }
 
-
-
 *::-webkit-scrollbar-thumb
 {
     background-color:rgb(95, 228, 115);
@@ -551,23 +565,12 @@ section#rodape
     border: solid 1px;
 }
 
-@media screen and (max-width: 1025px)
-{
-    .botoesalterar
-    {
-        margin-left: 100px;
-    }
-  }
 @media screen and (max-width: 1000px)
 {
-    .botoesalterar
-    {
-        margin-left: 100px;
-    }
     .botoesalterar .btn1
     {
         height: 50px;
-        width: 25%;
+        margin-left: 20px;
     }
     .enderecotitulo .btn2
     {

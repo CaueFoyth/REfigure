@@ -5,7 +5,6 @@ html, body
     overflow-x: hidden;
 }
 
-
 #aside /*Menu lateral*/
 {
     position: fixed;
@@ -81,7 +80,7 @@ i.menu-mobile
     display: none;
     justify-content: center;
     align-items: center;
-} 
+}
 
 .menu-nav-active
 {
@@ -325,7 +324,7 @@ section#cabecalho
     background-color: #fff;
   }
   
-  .btn:hover > .paragraph 
+  .btn:hover .paragraph 
   {
     visibility: visible;
     opacity: 1;
@@ -333,7 +332,7 @@ section#cabecalho
     transition-delay: .4s;
   }
   
-  .btn:hover > .icon-wrapper .icon 
+  .btn:hover  .icon-wrapper .icon 
   {
     transform: scale(1.1);
   }
@@ -458,127 +457,111 @@ section#cabecalho
 }
 
 .titulo{
-    color: #fff;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-items: center;
-    justify-content: space-around;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: larger;
-    -webkit-text-stroke: 2px #0d5000;
-    margin-top: 2%;
+  color: #fff;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: larger;
+  -webkit-text-stroke: 2px #0d5000;
+  margin-top: 5%;
 }
 
-.card_1 {
-    box-sizing: border-box;
-    width: 190px;
-    height: 254px;
-    background: rgba(217, 217, 217, 0.58);
-    border: 1px solid white;
-    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-    backdrop-filter: blur(6px);
-    border-radius: 17px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    user-select: none;
-    font-weight: bolder;
-    color: black;
-    flex-direction: column;
+.card {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  background: #191919;
+  overflow: hidden;
+  box-shadow: 0px 1px 14px 1px rgba(0,0,0,0.74);
+  border-radius: 20px;
+  margin-bottom: 50px;
 }
 
-.card_1:hover {  /*Categorias animais*/
-    border: 1px solid black;
-    transform: scale(1.05);
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #85e46e;
+  transform: skewY(345deg);
+  transition: 0.5s;
 }
 
-  .card:active { /*Categorias animais*/
-    transform: scale(0.95) rotateZ(1.7deg);
-  }
-  .imgs{  /*Categorias animais*/
-    margin-top: -70%;
-    scale: 50%;
+.card:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
 }
 
-
-.card_2 { /*Categorias P&B*/
-    box-sizing: border-box;
-    width: 190px;
-    height: 254px;
-    background: rgba(217, 217, 217, 0.58);
-    border: 1px solid white;
-    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-    backdrop-filter: blur(6px);
-    border-radius: 17px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    user-select: none;
-    font-weight: bolder;
-    color: black;
-    flex-direction: column;
+.card::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.1);
 }
 
-.card_2:hover { /*Categorias P&B*/
-    border: 1px solid black;
-    transform: scale(1.05);
+.card .imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+.card .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
 }
 
-  .card_2:active { /*Categorias P&B*/
-    transform: scale(0.95) rotateZ(1.7deg);
-}
-.imgs{ /*Categorias P&B*/
-    margin-top: -70%;
-    scale: 50%;
-}
-
-.card_3 {  /*Categorias Colorido*/
-    box-sizing: border-box;
-    width: 190px;
-    height: 254px;
-    background: rgba(217, 217, 217, 0.58);
-    border: 1px solid white;
-    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-    backdrop-filter: blur(6px);
-    border-radius: 17px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    user-select: none;
-    font-weight: bolder;
-    color: black;
-    flex-direction: column;
+.card .contentBox h3 {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.card_3:hover { /*Categorias Colorido*/
-    border: 1px solid black;
-    transform: scale(1.05);
+.card .contentBox .preco {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-.card_3:active { /*Categorias Colorido*/
-    transform: scale(0.95) rotateZ(1.7deg);
-}
-.imgs{ /*Categorias Colorido*/
-    margin-top: -70%;
-    scale: 50%;
+.card .contentBox .comprar {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: #85e400;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
 }
 
+.card:hover .contentBox .comprar {
+  top: 0;
+  opacity: 1;
+}
 .figure {
   height: 300px;
   width: auto;
 }
-
-
 .alinhamento
 {
   display: flex;

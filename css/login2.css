@@ -1,0 +1,271 @@
+html, body
+{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+section#cabecalho
+{
+    width: 100%;
+    height: 10vh;
+    border-bottom: 2px solid;
+    background-color:rgb(95, 228, 115);
+}
+
+.alinhamento
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.cantologo
+{
+    width: 33%;
+    height: 100%;
+}
+
+.logo
+{
+    scale: 100%;
+    transition: all 0.3s ease-out;
+}
+.logo:hover
+{
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+}
+
+.nome
+{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  height: 100%;
+}
+
+.canto
+{
+    display: flex;
+}
+
+.btn 
+{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 5px .2px #00000035;
+    box-shadow: 1px 1px 5px .2px #00000035;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    transition-delay: .2s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-between;
+  }
+  
+  .btn:hover 
+  {
+    width: 150px;
+    transition-delay: .2s;
+    background-color: #fff;
+  }
+  
+  .btn:hover .paragraph 
+  {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s;
+  }
+  
+  .btn:hover  .icon-wrapper .icon 
+  {
+    transform: scale(1.1);
+  }
+
+  .paragraph 
+  {
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 15px;
+    margin-right: 20px;
+    padding-left: 20px;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .icon-wrapper 
+  {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #main
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    background-image: radial-gradient(rgb(151, 221, 151), rgb(209, 231, 209), rgb(255, 255, 255));
+  }
+
+  #logar
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cresce
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .login
+{
+    display: flex;
+    width: 370px;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0px 1px 14px 1px rgba(0,0,0,0.74);
+    row-gap: 40px;
+    z-index: 1;
+}
+
+.logintitulo
+{
+    font-size: 27px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: rgb(13, 145, 13); 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.icones
+{
+  color: rgb(13, 145, 13); 
+}
+
+.imgs
+{
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    right: 8px;
+    color: rgb(13, 145, 13); 
+}
+
+.formatar
+{
+    border-radius: 10px;
+    border-color: #0eb316;
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+}
+
+.loginbox
+{
+    position: relative;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.b321
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.esqueceu
+{
+    text-decoration: none;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conta
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    position: relative;
+    color: rgb(53, 53, 53);
+    text-decoration: none;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: groove;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-color: #0eb316;
+    border-radius: 10px;
+}
+
+.entrarbotao{
+    width: 80%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    background: linear-gradient(334deg, #9af5bd, #24f8a7, #00ff0d);
+	background-size: 180% 180%;
+	animation: gradient-animation 6s ease infinite;
+    transition: 0.3s all ease-in-out;
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -42,3 +42,8 @@ topico = "refigure_chat";  // Variável que ficará no servidor MQTT
     message.destinationName = topico;
     client.send(message);
   }
+
+  function Logo1()
+{
+  window.location.replace("logado.php")
+};
