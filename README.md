@@ -1,0 +1,1 @@
+Esse foi meu primeiro projeto no tecnico de desenvolvimento de sistema do Senai, então contem muitos e erros, porem esse projeto foi enssencial para o desenvolvimento do meu conhecimento na área!
